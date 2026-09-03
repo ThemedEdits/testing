@@ -33,7 +33,7 @@
     const category = escapeHtml(post.category);
 
     return `
-      <a href="/insights/${post.id}/" class="blog-card ${slotClass} reveal" style="--reveal-delay:${i * 0.3}s">
+      <a href="/insights/${post.id}/" class="blog-card ${slotClass} reveal" style="--reveal-delay:${i * 0.2}s">
         <div class="blog-card__media" data-fallback="${category}">
           <img src="${post.cover}" alt="${title}" class="blog-card__img" loading="lazy">
         </div>
