@@ -82,32 +82,49 @@
   const siteHeader = document.querySelector(".site-header");
   let menuScrollY = 0;
 
-  function setMenuOrigin() {
-    if (!toggle || !mobileNav) return;
-    const rect = toggle.getBoundingClientRect();
-    const x = rect.left + rect.width / 2;
-    const y = rect.top + rect.height / 2;
+function setMenuOrigin() {
+  if (!toggle || !mobileNav) return;
+  // Cache the rect calculation and only run when needed
+  const rect = toggle.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+  
+  // Batch style updates
+  requestAnimationFrame(() => {
     mobileNav.style.setProperty("--menu-origin-x", `${x}px`);
     mobileNav.style.setProperty("--menu-origin-y", `${y}px`);
     if (!mobileNav.classList.contains("is-open")) {
       mobileNav.style.clipPath = `circle(0px at ${x}px ${y}px)`;
     }
-    return { x, y };
-  }
+  });
+  return { x, y };
+}
 
-  function openNav() {
-    menuScrollY = lenis ? lenis.scroll : window.scrollY;
-    const origin = setMenuOrigin();
-    if (lenis) lenis.stop();
+function openNav() {
+  menuScrollY = lenis ? lenis.scroll : window.scrollY;
+  
+  // Get origin first
+  const rect = toggle.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+  mobileNav.style.setProperty("--menu-origin-x", `${x}px`);
+  mobileNav.style.setProperty("--menu-origin-y", `${y}px`);
+  
+  if (lenis) lenis.stop();
+  
+  // Batch all DOM changes before reflow
+  requestAnimationFrame(() => {
     mobileNav.classList.remove("is-closing");
-    mobileNav.style.clipPath = `circle(0px at ${origin.x}px ${origin.y}px)`;
+    mobileNav.style.clipPath = `circle(0px at ${x}px ${y}px)`;
     mobileNav.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
     if (siteHeader) siteHeader.classList.add("mobile-menu-open");
+    
     requestAnimationFrame(() => {
-      mobileNav.style.clipPath = `circle(150vmax at ${origin.x}px ${origin.y}px)`;
+      mobileNav.style.clipPath = `circle(150vmax at ${x}px ${y}px)`;
     });
-  }
+  });
+}
 
   // Seed the closed state before the first possible click after navigation.
   setMenuOrigin();

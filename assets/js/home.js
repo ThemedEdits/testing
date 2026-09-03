@@ -117,9 +117,11 @@ document.querySelectorAll(".founder-card__flip").forEach((el) => {
   const progressEl = timeline.querySelector("[data-timeline-progress]");
   const steps = Array.from(timeline.querySelectorAll("[data-timeline-step]"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---- Continuous trail fill, tied to scroll position ---- */
-  let ticking = false;
+  
+  // Cache the rect
+  let cachedRect = null;
+  let lastUpdate = 0;
+  const THROTTLE_MS = 50;
 
   function updateProgress() {
     ticking = false;
@@ -127,9 +129,22 @@ document.querySelectorAll(".founder-card__flip").forEach((el) => {
       progressEl.style.height = "100%";
       return;
     }
-    const rect = timeline.getBoundingClientRect();
+    
+    const now = Date.now();
+    if (now - lastUpdate < THROTTLE_MS) {
+      ticking = true;
+      requestAnimationFrame(updateProgress);
+      return;
+    }
+    lastUpdate = now;
+    
+    // Cache the rect if not cached or on resize
+    if (!cachedRect) {
+      cachedRect = timeline.getBoundingClientRect();
+    }
+    
     const viewportMid = window.innerHeight * 0.55;
-    const progress = Math.min(1, Math.max(0, (viewportMid - rect.top) / rect.height));
+    const progress = Math.min(1, Math.max(0, (viewportMid - cachedRect.top) / cachedRect.height));
     progressEl.style.height = progress * 100 + "%";
   }
 
@@ -140,8 +155,12 @@ document.querySelectorAll(".founder-card__flip").forEach((el) => {
     }
   }
 
+  // Invalidate cache on resize
+  window.addEventListener("resize", () => {
+    cachedRect = null;
+  }, { passive: true });
+
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
   if (window.numeriqLenis) window.numeriqLenis.on("scroll", onScroll);
   updateProgress();
 
