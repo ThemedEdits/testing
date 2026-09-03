@@ -1,0 +1,210 @@
+/* ==========================================================================
+   WHY NUMERIQ PAGE — styles specific to why-numeriq/index.html only.
+   Reused as-is from existing stylesheets: .page-intro/.hero-floaters,
+   .section-head*, .approach-list/.approach-item, .audience-grid/.audience-item,
+   .faq*, .cta-section*, .btn*. Nothing below duplicates those.
+   ========================================================================== */
+
+/* hero secondary action row (primary button + text link side by side) */
+.why-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   1. INTRO / POSITIONING — single lead paragraph, no card
+   ========================================================================== */
+.why-intro__lead {
+  max-width: 72ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: var(--fs-body-lg);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.audience-item {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at 15% 10%, rgba(174, 235, 209, .4) 10%, transparent 35%), linear-gradient(225deg, var(--color-white) 0%, var(--color-mint-50) 55%, var(--color-mint-100) 100%);
+}
+
+.audience-item h4 {
+  margin-bottom: .5rem
+}
+
+@media (max-width:600px) {
+  .audience-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* ==========================================================================
+   2. CORE DIFFERENTIATORS — 6 clean bordered cards
+   ========================================================================== */
+.differentiator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2rem);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.differentiator-card {
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-mint-50) 45%, var(--color-mint-100) 75%, rgba(174, 235, 209, .45) 100%);
+  transition: transform var(--duration-fast) var(--ease-out-soft), border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.differentiator-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-green-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.differentiator-card__index {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-green-600);
+  margin-bottom: .6rem;
+}
+
+.differentiator-card h4 {
+  margin-bottom: .5rem
+}
+
+.differentiator-card p {
+  font-size: var(--fs-body-sm)
+}
+
+@media (max-width:900px) {
+  .differentiator-grid {
+    grid-template-columns: 1fr 1fr
+  }
+}
+
+@media (max-width:560px) {
+  .differentiator-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* ==========================================================================
+   3. THE NUMERIQ DIFFERENCE — comparison table
+   ========================================================================== */
+.comparison-table {
+  max-width: 920px;
+  margin-inline: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.comparison-table__header,
+.comparison-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comparison-table__header {
+  background: var(--color-navy-900);
+}
+
+.comparison-table__header span {
+  padding: 1rem clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: var(--fs-body-sm);
+}
+
+.comparison-table__row {
+  border-top: 1px solid var(--color-border)
+}
+
+.comparison-table__row>span {
+  padding: 1rem clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: var(--fs-body-sm);
+}
+
+.comparison-table__label {
+  display: none
+}
+
+.comparison-table__old {
+  color: var(--color-ink-muted);
+  background: var(--color-mint-50);
+}
+
+.comparison-table__new {
+  color: var(--color-navy-900);
+  font-weight: 700;
+  background: var(--color-mint-100);
+}
+
+@media (max-width:640px) {
+  .comparison-table__header {
+    display: none
+  }
+
+  .comparison-table__row {
+    grid-template-columns: 1fr
+  }
+
+  .comparison-table__row>span {
+    border-bottom: 1px solid var(--color-border)
+  }
+
+  .comparison-table__row>span:last-child {
+    border-bottom: none
+  }
+
+  .comparison-table__label {
+    display: block;
+    font-size: var(--fs-caption);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin-bottom: .25rem;
+    opacity: .6;
+  }
+}
+
+/* ==========================================================================
+   5. WHY CLIENTS STAY — text-led, no cards
+   ========================================================================== */
+.clients-stay__lead {
+  max-width: 72ch;
+  margin-inline: auto;
+  margin-bottom: clamp(2rem, 3.5vw, 2.5rem);
+  text-align: center;
+  font-size: var(--fs-body-lg);
+}
+
+.clients-stay__points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+}
+
+.clients-stay__points li {
+  padding: .6rem 1.25rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: var(--fs-body-sm);
+  color: var(--color-navy-900);
+}

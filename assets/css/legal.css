@@ -1,0 +1,137 @@
+/* ==========================================================================
+   NUMERIQ GLOBAL — LEGAL PAGES (Privacy & Terms) SHARED STYLES
+   Uses only variables from main.min.css
+   ========================================================================== */
+
+/* Page-specific background */
+.legal-page {
+  background: var(--color-bg);
+}
+
+/* Main content wrapper */
+.legal-main {
+  padding-top: calc(var(--header-h) + clamp(2rem, 5vw, 4rem));
+  padding-bottom: var(--space-3xl);
+  min-height: 80vh;
+}
+
+/* Container for legal content */
+.legal-container {
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+}
+
+/* Heading styles */
+.legal-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.legal-updated {
+  text-align: center;
+  font-size: var(--fs-caption);
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-2xl);
+  display: block;
+}
+
+/* Section content styles */
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--color-navy-900);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-content h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h5);
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.legal-content p {
+  font-size: var(--fs-body);
+  color: var(--color-ink-soft);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-content p+p {
+  margin-top: var(--space-sm);
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+}
+
+.legal-content ul li,
+.legal-content ol li {
+  font-size: var(--fs-body);
+  color: var(--color-ink-soft);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-2xs);
+}
+
+.legal-content ul li::marker {
+  color: var(--color-green-500);
+}
+
+/* Important / warning callout for sensitive info */
+.legal-warning {
+  background: var(--color-mint-100);
+  border-left: 4px solid var(--color-green-500);
+  padding: var(--space-md);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-block: var(--space-md);
+}
+
+.legal-warning p {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--color-navy-900);
+}
+
+/* Contact info block at the end */
+.legal-contact {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.legal-contact h3 {
+  margin-top: 0;
+}
+
+.legal-contact a {
+  color: var(--color-green-600);
+  font-weight: 700;
+  transition: color var(--duration-fast) var(--ease-out-soft);
+}
+
+.legal-contact a:hover {
+  color: var(--color-green-700);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legal-title {
+    font-size: var(--fs-h2);
+  }
+
+  .legal-content h2 {
+    font-size: var(--fs-h4);
+  }
+}
