@@ -1008,7 +1008,7 @@ html {
 }
 
 .btn--accent {
-  --btn-bg: var(--color-green-600);
+  --btn-bg: var(--color-green-700);
   --btn-fg: var(--color-white);
   --icon-bg: var(--color-navy-900);
   box-shadow: var(--shadow-btn)
