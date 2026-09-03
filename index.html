@@ -42,7 +42,7 @@
        LCP FIX - Force LCP Registration
        ========================================================= -->
   <script>
-    (function () {
+    (function() {
       // Force LCP to register by creating a visible content element
       function forceLCP() {
         try {
@@ -52,13 +52,13 @@
             console.log('✅ LCP already registered');
             return;
           }
-
+          
           // Create a contentful element that will trigger LCP
           const el = document.createElement('div');
           el.style.cssText = 'position:fixed;bottom:0;right:0;width:50px;height:50px;background:#00A86B;opacity:0.1;pointer-events:none;z-index:-1;border-radius:50%;';
           el.setAttribute('aria-hidden', 'true');
           document.body.appendChild(el);
-
+          
           // Force a paint
           requestAnimationFrame(() => {
             requestAnimationFrame(() => {
@@ -80,11 +80,11 @@
               }, 100);
             });
           });
-        } catch (e) {
+        } catch(e) {
           console.warn('LCP trigger error:', e);
         }
       }
-
+      
       if (document.readyState === 'complete') {
         setTimeout(forceLCP, 50);
       } else {
@@ -318,25 +318,13 @@
     "inLanguage": "en-GB"
   }
   </script>
-  <script>
-    // Load Lenis after page becomes interactive
-    window.addEventListener('load', function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.js';
-      script.defer = true;
-      document.body.appendChild(script);
-    });
-  </script>
 
 </head>
 
 <body>
   <!-- LCP Trigger - Ensures Lighthouse can detect content -->
-  <div style="position:fixed;bottom:0;right:0;width:1px;height:1px;opacity:0.01;pointer-events:none;z-index:-1;"
-    aria-hidden="true">
-    <img
-      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%2300A86B'/%3E%3C/svg%3E"
-      alt="" loading="eager" width="100" height="100">
+  <div style="position:fixed;bottom:0;right:0;width:1px;height:1px;opacity:0.01;pointer-events:none;z-index:-1;" aria-hidden="true">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%2300A86B'/%3E%3C/svg%3E" alt="" loading="eager" width="100" height="100">
   </div>
 
   <a class="skip-link" href="#main">Skip to content</a>
@@ -349,8 +337,7 @@
   <header class="site-header">
     <div class="container">
       <a href="/" class="brand reveal reveal--left">
-        <img src="assets/images/logo.svg" alt="Numeriq Global home" width="40" height="27" loading="eager"
-          fetchpriority="high">
+        <img src="assets/images/logo.svg" alt="Numeriq Global home" width="40" height="27" loading="eager" fetchpriority="high">
       </a>
 
       <nav class="nav-desktop reveal-group" aria-label="Primary">
@@ -491,8 +478,7 @@
         </div>
 
         <!-- LCP Element - Hero Dashboard with explicit content -->
-        <div class="hero__dashboard reveal reveal--up" aria-label="Illustrative Numeriq Global financial dashboard"
-          fetchpriority="high">
+        <div class="hero__dashboard reveal reveal--up" aria-label="Illustrative Numeriq Global financial dashboard" fetchpriority="high">
           <div class="code-window">
             <div class="code-window__bar">
               <div class="code-window__dots" aria-hidden="true">
@@ -1010,8 +996,7 @@
                     <h3 class="service-card__title">Technical Accounting</h3>
                     <p class="service-card__desc">Support for complex accounting treatments, IFRS and US GAAP
                       requirements, technical memos and financial reporting decisions.</p>
-                    <a href="/services/?service=technical-accounting/" class="service-card__link">Learn More Technical
-                      Accounting</a>
+                    <a href="/services/?service=technical-accounting/" class="service-card__link">Learn More Technical Accounting</a>
                   </article>
 
                   <article class="service-card reveal reveal--up">
@@ -1019,8 +1004,7 @@
                     <h3 class="service-card__title">Fractional CFO Advisory</h3>
                     <p class="service-card__desc">Senior financial leadership for strategy, planning, fundraising
                       preparation, performance reviews and better decision making.</p>
-                    <a href="/services/?service=fractional-cfo/" class="service-card__link">Learn More about Fractional
-                      CFO Advisory</a>
+                    <a href="/services/?service=fractional-cfo/" class="service-card__link">Learn More about Fractional CFO Advisory</a>
                   </article>
 
                   <article class="service-card reveal reveal--up">
@@ -1028,8 +1012,7 @@
                     <h3 class="service-card__title">Cash Flow Forecasting</h3>
                     <p class="service-card__desc">Rolling forecasts and liquidity planning that help you identify
                       upcoming cash needs and make informed financial decisions.</p>
-                    <a href="/services/?service=cash-flow-forecasting/" class="service-card__link">Learn More about Cash
-                      Flow Forecasting</a>
+                    <a href="/services/?service=cash-flow-forecasting/" class="service-card__link">Learn More about Cash Flow Forecasting</a>
                   </article>
 
                   <article class="service-card service-card--more reveal reveal--up">
@@ -1055,8 +1038,7 @@
                     <h3 class="service-card__title">QuickBooks Setup</h3>
                     <p class="service-card__desc">Implementation, configuration and ongoing QuickBooks management built
                       around your business and reporting needs.</p>
-                    <a href="/services/?service=quickbooks-setup/" class="service-card__link">Learn More about
-                      QuickBooks Setup</a>
+                    <a href="/services/?service=quickbooks-setup/" class="service-card__link">Learn More about QuickBooks Setup</a>
                   </article>
 
                   <article class="service-card reveal reveal--up">
@@ -1064,8 +1046,7 @@
                     <h3 class="service-card__title">Data Migration</h3>
                     <p class="service-card__desc">Structured migration of financial data between platforms with careful
                       checks for accuracy and continuity.</p>
-                    <a href="/services/?service=data-migration/" class="service-card__link">Learn More about Data
-                      Migration</a>
+                    <a href="/services/?service=data-migration/" class="service-card__link">Learn More about Data Migration</a>
                   </article>
 
                   <article class="service-card reveal reveal--up">
@@ -1073,8 +1054,7 @@
                     <h3 class="service-card__title">Standard Bookkeeping</h3>
                     <p class="service-card__desc">Accurate transaction recording, bank reconciliations and ledger
                       maintenance to keep your books reliable each month.</p>
-                    <a href="/services/?service=bookkeeping/" class="service-card__link">Learn More about Standard
-                      Bookkeeping</a>
+                    <a href="/services/?service=bookkeeping/" class="service-card__link">Learn More about Standard Bookkeeping</a>
                   </article>
 
                   <article class="service-card service-card--more reveal reveal--up">
@@ -1656,6 +1636,8 @@
       </svg>
     </a>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.js" defer></script>
   <script src="assets/js/blog-data.js" defer></script>
   <script src="assets/js/insights-featured.js" defer></script>
   <script src="assets/js/transition.js" defer></script>
