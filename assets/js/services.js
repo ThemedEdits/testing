@@ -74,7 +74,15 @@
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             if (window.numeriqLenis) {
-              window.numeriqLenis.scrollTo(target, { offset: -24, duration: 1.1 });
+              window.numeriqLenis.scrollTo(target, {
+                offset: -120,
+                duration: 3.2,
+                easing: (t) => {
+                  return t < 0.5
+                    ? 4 * t * t * t
+                    : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                }
+              });
             } else {
               target.scrollIntoView({ behavior: "smooth", block: "start" });
             }

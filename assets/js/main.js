@@ -30,16 +30,17 @@
     // Recalculate after late-loading assets change the document height.
     window.addEventListener("load", () => lenis.resize(), { once: true });
 
-    // keep it stopped until the entrance transition finishes
-    lenis.stop();
-    document.addEventListener(
-      "numeriq:transition-complete",
-      () => {
-        lenis.resize();
-        lenis.start();
-      },
-      { once: true }
-    );
+    const startLenis = () => {
+      lenis.resize();
+      lenis.start();
+    };
+
+    if (root.classList.contains("transition-ready")) {
+      startLenis();
+    } else {
+      lenis.stop();
+      document.addEventListener("numeriq:transition-complete", startLenis, { once: true });
+    }
   }
 
   /* Smooth-scroll same-page anchor links via Lenis */
@@ -178,8 +179,14 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: "60px 0px" }
+      { threshold: 0.52, rootMargin: "0px" }
     );
+
+    revealEls.forEach((el) => {
+      if (!el.classList.contains("is-visible")) {
+        io.observe(el);
+      }
+    });
 
     revealEls.forEach((el) => {
       if (!el.classList.contains("is-visible")) {

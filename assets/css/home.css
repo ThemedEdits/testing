@@ -732,7 +732,6 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-white);
-  transition: all var(--duration-fast) ease;
   position: relative;
 }
 
@@ -741,12 +740,6 @@
 .service-card:nth-child(4) .service-card__title {
   background: var(--color-ink);
   color: var(--color-mint-100);
-}
-
-.service-card:hover {
-  border-color: var(--color-green-200);
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-4px);
 }
 
 .service-card__number {
