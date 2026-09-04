@@ -87,7 +87,7 @@
               target.scrollIntoView({ behavior: "smooth", block: "start" });
             }
             target.classList.add("is-highlighted");
-            setTimeout(() => target.classList.remove("is-highlighted"), 2200);
+            setTimeout(() => target.classList.remove("is-highlighted"), 3500);
           });
         });
       };
