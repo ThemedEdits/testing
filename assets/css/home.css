@@ -1703,24 +1703,33 @@
 }
 
 @media (max-width: 720px) {
-
   .blog-grid {
     grid-template-columns: 1fr;
     grid-template-rows: none;
   }
 
-  .blog-card--wide,
+  /* Feature card first on mobile */
   .blog-card--feature {
+    order: -1; /* Moves it to the top */
     grid-column: 1;
     grid-row: auto;
   }
 
   .blog-card--wide {
+    order: 0;
+    grid-column: 1;
+    grid-row: auto;
     flex-direction: column;
   }
 
   .blog-card--wide .blog-card__media {
     min-height: 220px;
+  }
+
+  .blog-card--small {
+    order: 1;
+    grid-column: 1;
+    grid-row: auto;
   }
 }
 

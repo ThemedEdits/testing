@@ -17,7 +17,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "Cash flow can tell you things that a profit and loss statement cannot. Here are the key areas business owners should monitor to understand where cash is coming from, where it is going, and what it means for the business.",
     category: "Planning & Forecasting",
-    cover: "/assets/images/insights/understanding-your-cash-flow.webp",
+    cover: "/assets/images/insights/blog-1.webp",
     author: {
       name: "Muhammad Talha",
       role: "Co-Founder & Financial Operations Lead",
@@ -32,7 +32,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "The numbers your business generates every day hold more than a record of what happened, they hold a map of what to do next.",
     category: "Business Finance",
-    cover: "/assets/images/insights/financial-insights-for-better-business-decisions.webp",
+    cover: "/assets/images/insights/blog-2.webp",
     author: {
       name: "Muhammad Mateen",
       role: "Co-Founder & Technical Accounting Lead",
@@ -47,7 +47,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "A P&L is more than a pass or fail on profitability. Read correctly, it points to exactly where your margins are being won or lost.",
     category: "Financial Reporting",
-    cover: "/assets/images/insights/what-your-profit-and-loss-statement-is-really-telling-you.webp",
+    cover: "/assets/images/insights/blog-3.webp",
     author: {
       name: "Muhammad Mateen",
       role: "Co-Founder & Technical Accounting Lead",
@@ -62,7 +62,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "Growth can strain cash faster than it builds profit. Here's how to build a forecast that keeps you ahead of it.",
     category: "Planning & Forecasting",
-    cover: "/assets/images/insights/cash-flow-forecasting-for-growing-businesses.webp",
+    cover: "/assets/images/insights/blog-4.webp",
     author: {
       name: "Muhammad Talha",
       role: "Co-Founder & Financial Operations Lead",
