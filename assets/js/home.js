@@ -117,38 +117,36 @@ document.querySelectorAll(".founder-card__flip").forEach((el) => {
   const progressEl = timeline.querySelector("[data-timeline-progress]");
   const steps = Array.from(timeline.querySelectorAll("[data-timeline-step]"));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  
-  // Cache the rect
+
+  let ticking = false;
   let cachedRect = null;
-  let lastUpdate = 0;
-  const THROTTLE_MS = 50;
+  let currentProgress = 0;
+  const SMOOTHING = 0.12; // Adjust for more/less smoothing
 
   function updateProgress() {
     ticking = false;
     if (reduceMotion) {
-      progressEl.style.height = "100%";
+      progressEl.style.transform = "translateX(-50%) scaleY(1)";
       return;
     }
-    
-    const now = Date.now();
-    if (now - lastUpdate < THROTTLE_MS) {
-      ticking = true;
-      requestAnimationFrame(updateProgress);
-      return;
-    }
-    lastUpdate = now;
-    
-    // Cache the rect if not cached or on resize
+
+    // Cache the rect to avoid reflow
     if (!cachedRect) {
       cachedRect = timeline.getBoundingClientRect();
     }
-    
+
     const viewportMid = window.innerHeight * 0.55;
-    const progress = Math.min(1, Math.max(0, (viewportMid - cachedRect.top) / cachedRect.height));
-    progressEl.style.height = progress * 100 + "%";
+    const rawProgress = Math.min(1, Math.max(0, (viewportMid - cachedRect.top) / cachedRect.height));
+    
+    // Smooth the progress
+    currentProgress = currentProgress + (rawProgress - currentProgress) * SMOOTHING;
+    
+    // Use transform for GPU acceleration
+    progressEl.style.transform = `translateX(-50%) scaleY(${currentProgress})`;
   }
 
   function onScroll() {
+    cachedRect = null; // Refresh rect on each scroll
     if (!ticking) {
       requestAnimationFrame(updateProgress);
       ticking = true;
@@ -162,6 +160,8 @@ document.querySelectorAll(".founder-card__flip").forEach((el) => {
 
   window.addEventListener("scroll", onScroll, { passive: true });
   if (window.numeriqLenis) window.numeriqLenis.on("scroll", onScroll);
+  
+  // Initial update
   updateProgress();
 
   /* ---- One-shot reveal per step as the trail reaches it ---- */

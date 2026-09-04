@@ -1302,11 +1302,13 @@
   left: var(--rail);
   top: .4rem;
   width: 2px;
-  height: 0%;
+  height: 100%;
   background: var(--gradient-brand);
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top center;
   border-radius: 2px;
-  will-change: height;
+  will-change: transform;
+  transition: transform 0.1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .timeline__list {
