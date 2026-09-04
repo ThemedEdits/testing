@@ -573,11 +573,15 @@
 }
 
 .who-differentiator__icon img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 100%;
+  height: 100%;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
   display: block;
   object-fit: contain;
+  aspect-ratio: 1 / 1;
 }
+
 
 .who-differentiator h4 {
   margin: 0 0 .2rem;
