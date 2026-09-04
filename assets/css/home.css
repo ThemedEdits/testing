@@ -1041,7 +1041,6 @@
   position: relative;
   padding: var(--section-py) 0;
   background: transparent;
-  /* inherits page background, by design */
 }
 
 .founders-list {
@@ -1061,6 +1060,7 @@
 
 .founder-card--reverse {
   flex-direction: row-reverse;
+  text-align: right; /* Align content to the right to match image position */
 }
 
 /* ---- Flip mechanism (image only) ---- */
@@ -1196,12 +1196,24 @@
   border-radius: 2px;
 }
 
+/* Reverse card divider - right-aligned */
+.founder-card--reverse .founder-card__divider {
+  margin-left: auto; /* Push to the right */
+  background: linear-gradient(to left, var(--color-green-500), transparent 85%); /* Flip gradient */
+}
+
 /* the 3 info points — one consistent style, each on its own line */
 .founder-card__points {
   display: flex;
   flex-direction: column;
   gap: .5rem;
   text-align: left;
+}
+
+/* Reverse card points - right-aligned */
+.founder-card--reverse .founder-card__points {
+  align-items: flex-end; /* Align pills to the right */
+  text-align: right;
 }
 
 .founder-card__points li {
@@ -1214,6 +1226,11 @@
   background: var(--gradient-brand-soft);
   color: var(--color-white);
   width: fit-content;
+}
+
+/* Reverse card pills - text right-aligned */
+.founder-card--reverse .founder-card__points li {
+  text-align: right;
 }
 
 .founder-card__points li::before {
@@ -1241,10 +1258,28 @@
 
 /* ---- Responsive: stack image-on-top for both founders ---- */
 @media (max-width: 860px) {
-
   .founder-card,
   .founder-card--reverse {
     flex-direction: column;
+    text-align: center;
+  }
+
+  /* Reset reverse-specific styles on mobile */
+  .founder-card--reverse {
+    text-align: center;
+  }
+
+  .founder-card--reverse .founder-card__divider {
+    margin-inline: auto;
+    background: linear-gradient(to right, var(--color-green-500), transparent 85%);
+  }
+
+  .founder-card--reverse .founder-card__points {
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder-card--reverse .founder-card__points li {
     text-align: center;
   }
 
