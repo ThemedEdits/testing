@@ -1,0 +1,84 @@
+# ============================================================
+# NUMERIQ GLOBAL
+# HOSTINGER / APACHE CONFIGURATION
+# ============================================================
+
+RewriteEngine On
+
+# ------------------------------------------------------------
+# 1. OLD BLOG URL MIGRATION
+# ------------------------------------------------------------
+
+# Old detailed blog -> new first Insight
+RewriteRule ^blog/small-business-accounting-services/?$ /insights/understanding-your-cash-flow/ [R=301,L]
+
+# Old blog listing -> new Insights listing
+RewriteRule ^blog/?$ /insights/ [R=301,L]
+
+
+# ------------------------------------------------------------
+# 2. CUSTOM 404
+# ------------------------------------------------------------
+
+ErrorDocument 404 /404.html
+
+
+# ------------------------------------------------------------
+# 3. GZIP / DEFLATE COMPRESSION
+# ------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+
+</IfModule>
+
+
+# ------------------------------------------------------------
+# 4. LONG-TERM CACHING FOR STATIC ASSETS
+# ------------------------------------------------------------
+
+<IfModule mod_expires.c>
+
+  ExpiresActive On
+
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  ExpiresByType application/manifest+json "access plus 1 year"
+
+</IfModule>
+
+
+# ------------------------------------------------------------
+# 5. CACHE-CONTROL HEADERS
+# ------------------------------------------------------------
+
+<IfModule mod_headers.c>
+
+  <FilesMatch "\.(css|js|svg|webp|jpg|jpeg|png|ico|webmanifest)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  <FilesMatch "\.(html?)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+</IfModule>
