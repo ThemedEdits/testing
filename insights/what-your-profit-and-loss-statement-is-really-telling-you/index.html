@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- =========================================================
+       DOCUMENT / BROWSER BASICS
+       ========================================================= -->
+
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem('numeriq:exit-transition') === '1') {
+          document.documentElement.classList.add('is-locked', 'page-precovered');
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What Your Profit & Loss Statement Is Really Telling You | Numeriq Global</title>
+
+  <meta name="description"
+    content="A P&L is more than a pass or fail on profitability. Read correctly, it points to exactly where your margins are being won or lost. Learn how to interpret your profit and loss statement effectively.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta name="author" content="Muhammad Mateen">
+
+  <meta name="application-name" content="Numeriq Global">
+
+  <meta name="theme-color" content="#071829">
+
+  <meta name="color-scheme" content="dark light">
+
+  <meta name="format-detection" content="telephone=yes">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- =========================================================
+       CANONICAL / PRIMARY URL
+       ========================================================= -->
+
+  <link rel="canonical" href="https://numeriqglobal.org/insights/what-your-profit-and-loss-statement-is-really-telling-you/">
+
+  <!-- =========================================================
+       FAVICONS / APP ICONS
+       ========================================================= -->
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+
+  <meta name="apple-mobile-web-app-title" content="Numeriq Global">
+
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+
+  <!-- =========================================================
+       OPEN GRAPH / FACEBOOK / LINK SHARING
+       ========================================================= -->
+
+  <meta property="og:type" content="article">
+
+  <meta property="og:url" content="https://numeriqglobal.org/insights/what-your-profit-and-loss-statement-is-really-telling-you/">
+
+  <meta property="og:title" content="What Your Profit & Loss Statement Is Really Telling You">
+
+  <meta property="og:description"
+    content="A P&L is more than a pass or fail on profitability. Read correctly, it points to exactly where your margins are being won or lost.">
+
+  <meta property="og:image" content="https://numeriqglobal.org/assets/images/insights/blog-3.webp">
+
+  <meta property="og:image:alt" content="What Your Profit & Loss Statement Is Really Telling You - Financial analysis">
+
+  <meta property="og:site_name" content="Numeriq Global">
+
+  <meta property="og:locale" content="en_GB">
+
+  <!-- =========================================================
+       X / TWITTER CARD
+       ========================================================= -->
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="What Your Profit & Loss Statement Is Really Telling You">
+
+  <meta name="twitter:description"
+    content="A P&L is more than a pass or fail on profitability. Read correctly, it points to exactly where your margins are being won or lost.">
+
+  <meta name="twitter:image" content="https://numeriqglobal.org/assets/images/insights/blog-3.webp">
+
+  <meta name="twitter:image:alt" content="What Your Profit & Loss Statement Is Really Telling You - Financial analysis">
+
+  <!-- =========================================================
+       RESOURCE HINTS
+       ========================================================= -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    media="print" onload="this.media='all'">
+
+  <!-- =========================================================
+       STYLESHEETS
+       ========================================================= -->
+
+  <link rel="stylesheet" href="/assets/css/main.min.css">
+  <link rel="stylesheet" href="/assets/css/insights.css">
+
+  <!-- =========================================================
+       STRUCTURED DATA - BLOG POST
+       ========================================================= -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://numeriqglobal.org/insights/what-your-profit-and-loss-statement-is-really-telling-you/",
+    "headline": "What Your Profit & Loss Statement Is Really Telling You",
+    "description": "A P&L is more than a pass or fail on profitability. Read correctly, it points to exactly where your margins are being won or lost.",
+    "image": "https://numeriqglobal.org/assets/images/insights/blog-3.webp",
+    "datePublished": "2026-08-16",
+    "dateModified": "2026-08-16",
+    "author": {
+      "@type": "Person",
+      "name": "Muhammad Mateen",
+      "url": "https://numeriqglobal.org/about/",
+      "jobTitle": "Co-Founder & Technical Accounting Lead",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Numeriq Global"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://numeriqglobal.org/#organization",
+      "name": "Numeriq Global",
+      "url": "https://numeriqglobal.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://numeriqglobal.org/assets/images/logo.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://numeriqglobal.org/insights/what-your-profit-and-loss-statement-is-really-telling-you/"
+    },
+    "articleSection": "Financial Reporting",
+    "keywords": "profit and loss statement, P&L, financial reporting, margin analysis, business profitability, income statement"
+  }
+  </script>
+
+  <!-- =========================================================
+       BREADCRUMB STRUCTURED DATA
+       ========================================================= -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://numeriqglobal.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Insights",
+        "item": "https://numeriqglobal.org/insights/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "What Your Profit & Loss Statement Is Really Telling You",
+        "item": "https://numeriqglobal.org/insights/what-your-profit-and-loss-statement-is-really-telling-you/"
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__panel"></div>
+    <div class="page-transition__bars"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand reveal reveal--left">
+        <img src="/assets/images/logo.svg" alt="Numeriq Global home" width="40" height="27" loading="eager"
+          fetchpriority="high">
+      </a>
+
+      <nav class="nav-desktop reveal-group" aria-label="Primary">
+        <div class="reveal reveal--up"><a href="/about/">About</a></div>
+        <div class="reveal reveal--up nav-item nav-item--has-dropdown">
+          <span class="nav-desktop-a nav-item__trigger" aria-haspopup="true">Services</span>
+
+          <div class="dropdown-menu">
+            <div class="dropdown-menu__container">
+              <div class="dropdown-menu__categories">
+                <span class="dropdown-menu__heading active" data-category="compliance">Reporting &amp; Compliance</span>
+                <span class="dropdown-menu__heading" data-category="operations">Accounting Operations</span>
+              </div>
+
+              <div class="dropdown-menu__content">
+                <ul class="dropdown-menu__list active" data-category="compliance">
+                  <li><a href="/services/?service=technical-accounting">Technical Accounting</a></li>
+                  <li><a href="/services/?service=fractional-cfo">Fractional CFO Advisory</a></li>
+                  <li><a href="/services/?service=cash-flow-forecasting">Cash Flow Forecasting</a></li>
+                  <li><a href="/services/?service=budgeting-planning">Budgeting &amp; Planning</a></li>
+                  <li><a href="/services/?service=group-consolidation">Group &amp; Foreign Consolidation</a></li>
+                  <li><a href="/services/?service=audit-liaison">Audit Liaison &amp; Readiness</a></li>
+                  <li><a href="/services/?service=intercompany-reconciliations">Intercompany Reconciliations</a></li>
+                </ul>
+
+                <ul class="dropdown-menu__list" data-category="operations">
+                  <li><a href="/services/?service=quickbooks-setup">QuickBooks Setup &amp; Management</a></li>
+                  <li><a href="/services/?service=data-migration">Data Migration</a></li>
+                  <li><a href="/services/?service=bookkeeping">Standard Bookkeeping</a></li>
+                  <li><a href="/services/?service=cleanup-catchup">Clean-up &amp; Catch-up</a></li>
+                  <li><a href="/services/?service=management-accounts">Management Accounts</a></li>
+                  <li><a href="/services/?service=payroll">Payroll Management</a></li>
+                  <li><a href="/services/?service=ap-ar">Accounts Payable &amp; Receivable</a></li>
+                  <li><a href="/services/?service=fixed-assets">Fixed Asset Register</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <a href="/services/" class="dropdown-menu__view-all">
+              View All Services
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="reveal reveal--up"><a href="/why-numeriq/">Why Numeriq</a></div>
+        <div class="reveal reveal--up"><a href="/process/">Process</a></div>
+        <div class="reveal reveal--up"><a href="/insights/">Insights</a></div>
+        <div class="reveal reveal--up"><a href="/contact/">Contact</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="button-wrapper reveal reveal--right">
+          <a href="/contact/" class="btn btn--outline btn--sm">
+            <span class="btn__text">Book a Consultation</span>
+            <span class="btn__icon">
+              <svg class="btn__icon-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <svg class="btn__icon-next" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <button class="nav-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="mobileNav" aria-label="Mobile">
+    <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/why-numeriq/">Why Numeriq</a></li>
+      <li><a href="/process/">Process</a></li>
+      <li><a href="/insights/">Insights</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <div class="button-wrapper reveal reveal--down">
+        <a href="/contact/" class="btn btn--accent">
+          <span class="btn__text">Book a Consultation</span>
+          <span class="btn__icon">
+            <svg class="btn__icon-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <svg class="btn__icon-next" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- BLOG POST HERO -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="blog-hero__inner reveal-group">
+
+          <!-- Breadcrumb -->
+          <nav class="blog-breadcrumb reveal" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><span class="blog-breadcrumb__separator">/</span></li>
+              <li><a href="/insights/">Insights</a></li>
+              <li><span class="blog-breadcrumb__separator">/</span></li>
+              <li><span>What Your Profit &amp; Loss Statement Is Really Telling You</span></li>
+            </ol>
+          </nav>
+
+          <!-- Category Tag -->
+          <span class="blog-hero__category reveal">Financial Reporting</span>
+
+          <!-- Title -->
+          <h1 class="blog-hero__title reveal">What Your Profit &amp; Loss Statement Is Really Telling You</h1>
+
+          <!-- Author Info -->
+          <div class="blog-hero__author reveal">
+            <img src="/assets/images/about/mateen-avatar.webp" alt="Muhammad Mateen" class="blog-hero__author-avatar"
+              width="56" height="56" loading="eager">
+            <div class="blog-hero__author-info">
+              <strong>Muhammad Mateen</strong>
+              <span>Co-Founder &amp; Technical Accounting Lead</span>
+              <span class="blog-hero__author-meta">August 16, 2026 · 5 min read</span>
+            </div>
+          </div>
+
+          <!-- Featured Image -->
+          <div class="blog-hero__image reveal">
+            <img src="/assets/images/insights/blog-3.webp"
+              alt="What Your Profit & Loss Statement Is Really Telling You - Financial analysis" width="1200" height="630"
+              loading="eager" fetchpriority="high">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <article class="blog-content">
+      <div class="container container--narrow">
+
+        <div class="blog-content__body">
+
+          <!-- Introduction -->
+          <p class="blog-content__lead reveal">
+            A profit and loss statement is often treated as a simple pass or fail on profitability. But that is a narrow view. A well-read P&L tells you far more than whether you made or lost money. It reveals exactly where your margins are being won or lost, which parts of your business are performing, and where inefficiencies are hiding.
+          </p>
+
+          <h2 class="reveal">What a P&L Actually Tells You</h2>
+
+          <p class="reveal">
+            A P&L statement, also known as an income statement, summarizes your revenues, costs, and expenses over a specific period. But beyond the bottom line, it provides a breakdown of how your business generates profit and where it spends money. When you read it correctly, your P&L becomes a strategic tool rather than just a financial report.
+          </p>
+
+          <p class="reveal">
+            The real value of a P&L lies in the details. It shows you the relationship between revenue and costs, highlights trends over time, and can signal problems before they become critical. The key is knowing what to look for and how to interpret the numbers in the context of your business.
+          </p>
+
+          <h2 class="reveal">The Three Critical Sections of a P&L</h2>
+
+          <h3 class="reveal">1. Revenue (Top Line)</h3>
+
+          <p class="reveal">
+            Revenue is the income generated from your core business operations. It is the starting point of your P&L and often the most scrutinized number. But not all revenue is equal. Understanding the composition of your revenue is essential. Are you seeing growth in high-margin products or services? Is revenue concentrated with a few customers, creating dependency risk?
+          </p>
+
+          <p class="reveal">
+            Revenue growth is generally positive, but it is important to look beyond the top-line number. Healthy revenue growth is sustainable, diversified, and aligned with your business strategy. If revenue is growing but profitability is declining, you may be chasing low-margin sales.
+          </p>
+
+          <h3 class="reveal">2. Cost of Goods Sold (COGS)</h3>
+
+          <p class="reveal">
+            Cost of Goods Sold represents the direct costs attributable to the production of the goods or services sold by your business. This includes materials, labor, and other costs directly tied to production. COGS is subtracted from revenue to calculate gross profit.
+          </p>
+
+          <p class="reveal">
+            Monitoring COGS is critical because it directly impacts your gross margin. If your COGS is rising faster than revenue, your gross margin is shrinking. This could be due to rising material costs, inefficiencies in production, or pricing pressure. A healthy gross margin gives you room to cover operating expenses and generate net profit.
+          </p>
+
+          <h3 class="reveal">3. Operating Expenses (OPEX)</h3>
+
+          <p class="reveal">
+            Operating expenses are the costs incurred in the day-to-day running of your business that are not directly tied to production. These include rent, salaries, marketing, utilities, and administrative costs. Operating expenses are subtracted from gross profit to arrive at operating income.
+          </p>
+
+          <p class="reveal">
+            Operating expenses are often the most controllable part of your P&L. While some costs are fixed, many are discretionary and can be adjusted based on business performance. Regularly reviewing operating expenses helps you identify areas where you can improve efficiency and reduce waste.
+          </p>
+
+          <h2 class="reveal">Key Ratios to Watch</h2>
+
+          <h3 class="reveal">Gross Margin</h3>
+
+          <p class="reveal">
+            Gross margin is calculated by dividing gross profit by revenue. It measures how much of your revenue is retained after accounting for the direct costs of producing your goods or services. A healthy gross margin gives you the flexibility to invest in growth and weather economic downturns.
+          </p>
+
+          <p class="reveal">
+            Gross margin trends are often more important than the absolute number. If your gross margin is declining, it may signal that your costs are rising faster than your prices, or that your product mix is shifting toward lower-margin offerings.
+          </p>
+
+          <h3 class="reveal">Operating Margin</h3>
+
+          <p class="reveal">
+            Operating margin is calculated by dividing operating income by revenue. It measures the proportion of revenue that remains after covering both COGS and operating expenses. A strong operating margin indicates that your business is efficiently managing both production and operating costs.
+          </p>
+
+          <h3 class="reveal">Net Profit Margin</h3>
+
+          <p class="reveal">
+            Net profit margin is the bottom line. It is calculated by dividing net income by revenue and shows the percentage of revenue that remains as profit after all expenses, including taxes and interest, are deducted. This is the ultimate measure of profitability.
+          </p>
+
+          <h2 class="reveal">Common Pitfalls When Reading a P&L</h2>
+
+          <h3 class="reveal">1. Focusing Only on the Bottom Line</h3>
+
+          <p class="reveal">
+            The net profit number is important, but it does not tell the full story. Two businesses with the same net profit can have very different financial health. One may have strong gross margins and high operating expenses, while the other has slim gross margins and low operating expenses. Understanding the components of profitability is essential for making informed decisions.
+          </p>
+
+          <h3 class="reveal">2. Ignoring Non-Recurring Items</h3>
+
+          <p class="reveal">
+            P&L statements often include one-time or non-recurring items such as restructuring costs, asset sales, or legal settlements. These items can distort your view of ongoing profitability. When analyzing your P&L, it is important to separate recurring from non-recurring items to get a clear picture of your core business performance.
+          </p>
+
+          <h3 class="reveal">3. Not Comparing Over Time</h3>
+
+          <p class="reveal">
+            A single P&L statement provides a snapshot, but the real insight comes from comparing statements over multiple periods. Trend analysis reveals whether your margins are improving or deteriorating, whether revenue growth is accelerating or slowing, and whether cost management is effective.
+          </p>
+
+          <h2 class="reveal">How to Use Your P&L for Better Decision Making</h2>
+
+          <h3 class="reveal">1. Identify Your Most Profitable Products or Services</h3>
+
+          <p class="reveal">
+            Your P&L can help you identify which products or services are generating the most profit. If you have multiple product lines, look at the gross margin for each. Focus your resources on high-margin offerings and consider whether low-margin products are worth continuing.
+          </p>
+
+          <h3 class="reveal">2. Monitor Cost Trends</h3>
+
+          <p class="reveal">
+            Track your costs over time to identify trends. Are your operating expenses growing faster than revenue? Is your COGS increasing due to supplier price hikes? Understanding cost trends helps you anticipate future challenges and take corrective action early.
+          </p>
+
+          <h3 class="reveal">3. Benchmark Against Industry Standards</h3>
+
+          <p class="reveal">
+            Comparing your margins and ratios to industry benchmarks can provide valuable context. If your gross margin is significantly below industry average, it may indicate that your pricing is too low or your costs are too high. Benchmarking helps you identify areas for improvement.
+          </p>
+
+          <h2 class="reveal">Final Thoughts</h2>
+
+          <p class="reveal">
+            Your profit and loss statement is one of the most powerful tools available for understanding your business. When read correctly, it points to exactly where your margins are being won or lost and provides the clarity needed to make better financial decisions.
+          </p>
+
+          <p class="reveal">
+            The key is to look beyond the bottom line and understand the components that drive profitability. By monitoring your margins, tracking cost trends, and using the insights from your P&L to guide your decisions, you can build a more profitable and resilient business.
+          </p>
+
+          <p class="reveal">
+            If you need help interpreting your financial statements or building better financial operations, the team at Numeriq Global is here to support you. We work with ambitious businesses to provide the financial clarity needed for strategic growth.
+          </p>
+
+        </div>
+
+        <!-- Author Bio -->
+        <div class="blog-author-bio reveal reveal--zoom-blur">
+          <img src="/assets/images/about/mateen-avatar.webp" alt="Muhammad Mateen" class="blog-author-bio__avatar"
+            width="80" height="80" loading="lazy">
+          <div class="blog-author-bio__info">
+            <strong>Muhammad Mateen</strong>
+            <span>Co-Founder &amp; Technical Accounting Lead</span>
+            <p>Muhammad Mateen is a Co-Founder of Numeriq Global and leads the firm's technical accounting practice. He is an ACA and ACCA qualified accountant with Big 4 experience across Asia, the Middle East, and the UK. With over 13 years of experience, he helps businesses navigate complex accounting requirements and build reliable financial reporting functions.</p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RELATED INSIGHTS -->
+    <section class="related-insights section">
+      <div class="container">
+
+        <div class="section-head section-head--center">
+          <div class="section-head__title reveal-group">
+            <div class="reveal reveal--zoom-blur section-head__decorations" aria-hidden="true">
+              <img class="section-head__shape section-head__shape--1" src="/assets/images/shapes/shape-1.svg" alt="">
+              <img class="section-head__shape section-head__shape--2" src="/assets/images/shapes/shape-2.svg" alt="">
+              <img class="section-head__shape section-head__shape--3" src="/assets/images/shapes/shape-3.svg" alt="">
+              <img class="section-head__shape section-head__shape--4" src="/assets/images/shapes/shape-4.svg" alt="">
+              <img class="section-head__shape section-head__shape--5" src="/assets/images/shapes/shape-5.svg" alt="">
+              <img class="section-head__shape section-head__shape--6" src="/assets/images/shapes/shape-6.svg" alt="">
+              <img class="section-head__shape section-head__shape--7" src="/assets/images/shapes/shape-7.svg" alt="">
+            </div>
+            <h2 class="reveal">Related Insights</h2>
+          </div>
+        </div>
+
+        <div class="related-insights__grid" id="relatedInsights">
+          <!-- Dynamically populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+      <div class="cta-section__tiles cta-section__tiles--left tile-grid" data-random aria-hidden="true"></div>
+      <div class="cta-section__tiles cta-section__tiles--right tile-grid tile-grid--mirror" data-random
+        aria-hidden="true"></div>
+
+      <div class="container">
+        <h2 class="cta-section__title reveal" data-reveal="up">Let's Build a Stronger Financial Function</h2>
+        <p class="cta-section__desc reveal" data-reveal="up" style="--reveal-delay:.08s">
+          Tell us where your business is today, what is getting in the way and where you want to go. We will help you
+          identify the right financial support for the next stage.
+        </p>
+
+        <div class="cta-section__actions reveal reveal--up">
+          <a href="/contact/" class="btn btn--white btn--lg">
+            <span class="btn__text">Book a Consultation</span>
+            <span class="btn__icon">
+              <svg class="btn__icon-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <svg class="btn__icon-next" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="https://wa.me/447376984098" class="btn btn--accent" target="_blank" rel="noopener">
+            <span class="btn__text">Message on WhatsApp</span>
+            <span class="btn__icon">
+              <svg class="btn__icon-current" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.25a9.75 9.75 0 0 0-8.44 14.62L2.5 21.5l4.78-1.05A9.75 9.75 0 1 0 12 2.25Zm0 17.65a7.86 7.86 0 0 1-4-1.09l-.28-.17-2.84.62.62-2.77-.18-.29A7.85 7.85 0 1 1 12 19.9Zm4.3-5.88c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.63-1.19-1.4-1.33-1.64-.14-.24-.02-.37.1-.49l.36-.42c.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+              </svg>
+              <svg class="btn__icon-next" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.25a9.75 9.75 0 0 0-8.44 14.62L2.5 21.5l4.78-1.05A9.75 9.75 0 1 0 12 2.25Zm0 17.65a7.86 7.86 0 0 1-4-1.09l-.28-.17-2.84.62.62-2.77-.18-.29A7.85 7.85 0 1 1 12 19.9Zm4.3-5.88c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.63-1.19-1.4-1.33-1.64-.14-.24-.02-.37.1-.49l.36-.42c.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid reveal-group">
+
+        <div class="reveal reveal--left footer-brand">
+          <a href="/" class="brand">
+            <img src="/assets/images/logo.svg" alt="Numeriq Global" width="36" height="24">
+            Numeriq Global
+          </a>
+
+          <p>Precision accounting and strategic finance advisory for ambitious businesses worldwide.</p>
+
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61572033266331" target="_blank" rel="noopener"
+              aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.5 21v-8.1h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.8V3.6c-.3-.04-1.3-.13-2.45-.13-2.42 0-4.08 1.48-4.08 4.2v2.13H7.5v3.1h2.77V21h3.23Z" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="reveal reveal--left footer-col">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/why-numeriq/">Why Numeriq</a></li>
+            <li><a href="/process/">Our Process</a></li>
+            <li><a href="/insights/">Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal--left footer-col">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="/services/?service=technical-accounting">Technical Accounting</a></li>
+            <li><a href="/services/?service=fractional-cfo">Fractional CFO Advisory</a></li>
+            <li><a href="/services/?service=bookkeeping">Bookkeeping</a></li>
+            <li><a href="/services/?service=quickbooks-setup">QuickBooks Setup</a></li>
+            <li><a href="/services/">View All Services</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal--left footer-col">
+          <h2>Get in Touch</h2>
+          <ul>
+            <li><a href="mailto:info@numeriqglobal.org">Email Us</a></li>
+            <li><a href="tel:+447376984098">Call +44 7376 984098</a></li>
+            <li><a href="https://wa.me/447376984098" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="/contact/">Book a Consultation</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom reveal reveal--up">
+        <p>&copy; <span id="year"></span> Numeriq Global. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-credit reveal reveal--up">
+      <p>
+        Designed &amp; Developed by
+        <a href="https://themededits.vercel.app/" target="_blank" rel="noopener" class="credit-link">
+          <span>Themed Edits</span>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="floating-actions" data-floating-actions>
+    <button type="button" class="floating-btn floating-btn--top" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <a href="https://wa.me/447376984098" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp"
+      aria-label="Chat with us on WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
+        <path
+          d="M16 2.5C8.54 2.5 2.5 8.54 2.5 16c0 2.38.62 4.61 1.71 6.55L2.5 29.5l7.18-1.7A13.43 13.43 0 0 0 16 29.5c7.46 0 13.5-6.04 13.5-13.5S23.46 2.5 16 2.5Zm0 24.55c-2.18 0-4.2-.65-5.89-1.77l-.42-.25-4.26 1.01 1.03-4.15-.28-.43A11.02 11.02 0 0 1 4.95 16c0-6.1 4.95-11.05 11.05-11.05S27.05 9.9 27.05 16 22.1 27.05 16 27.05Zm6.06-8.28c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.39-.51-2.65-1.63-.98-.87-1.64-1.94-1.83-2.27-.19-.33-.02-.51.14-.67.15-.15.33-.38.5-.57.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.17-.74-1.78-1.01-2.44-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.17.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.96-.8 2.24-1.58.28-.78.28-1.45.19-1.58-.08-.14-.3-.22-.63-.39Z" />
+      </svg>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.js" defer></script>
+  <script src="/assets/js/blog-data.js" defer></script>
+  <script src="/assets/js/insights-related.js" defer></script>
+  <script src="/assets/js/transition.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+
+</html>

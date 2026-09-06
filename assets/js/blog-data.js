@@ -77,7 +77,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "Full-time CFO expertise, without the full-time cost, here's how to know when your business is ready.",
     category: "CFO Insights",
-    cover: "/assets/images/insights/when-to-hire-a-fractional-cfo.webp",
+    cover: "/assets/images/insights/blog-5.webp",
     author: {
       name: "Muhammad Mateen",
       role: "Co-Founder & Technical Accounting Lead",
@@ -92,7 +92,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "A calm year-end starts months earlier. Here's the groundwork that makes closing the books a formality, not a scramble.",
     category: "Accounting",
-    cover: "/assets/images/insights/how-to-prepare-your-books-for-year-end.webp",
+    cover: "/assets/images/insights/blog-6.webp",
     author: {
       name: "Muhammad Talha",
       role: "Co-Founder & Financial Operations Lead",
@@ -107,7 +107,7 @@ window.NUMERIQ_BLOGS = [
     excerpt:
       "A clean monthly close is the foundation every good financial decision is built on. Here's the checklist we run internally.",
     category: "Accounting",
-    cover: "/assets/images/insights/closing-the-books-a-monthly-checklist.webp",
+    cover: "/assets/images/insights/blog-7.webp",
     author: {
       name: "Muhammad Talha",
       role: "Co-Founder & Financial Operations Lead",
